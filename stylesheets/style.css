@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header, main {
+    padding: 4%;
+}
+
+#background-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1000px;
+    z-index: -1;
+    background: linear-gradient(-8deg, white 25%, rgb(95, 157, 211) 25%, rgb(69, 133, 189) 100%)
+}
+
+#app {
+    background-color: rgb(80, 145, 200);
+}
+
+#top-navbar {
+    grid-template-columns: 20% auto 30%;
+    margin-bottom: 10vh;
+}
+
+#navbar-link-block {
+    color: white;
+    font-size: 20px;
+}
+
+.navbar-text {
+    padding: 10px;
+}
+
+#navbar-icon-block {
+    justify-self: end;
+}
+
+.navbar-icon {
+    height: 30px;
+    margin: 0px 15px 0px 15px;
+}
+
+.navbar-button {
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    height: 50px;
+    width: 120px;
+    font-size: 18px;
+    transition: 0.5s;
+    margin-left: 10px;
+}
+
+.navbar-button:hover {
+    background-color: salmon;
+}
+
+#top-description {
+    color: white;
+    grid-template-columns: 50% 50%;
+}
+
+#top-description-left-half>p {
+    font-size: 18px;
+    line-height: 2.5;
+}
+
+#signup-button {
+    background-color: white;
+    color: cornflowerblue;
+    border-color: cornflowerblue;
+    border: 1px solid;
+    border-radius: 4px;
+    height: 50px;
+    width: 120px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+
+#signup-button:hover {
+    color: coral;
+    border-color: coral;
+}
+
+.vertical-block {
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    width: 18%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+#get-started-content>ul {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+#get-started-title {
+    margin: 8%;
+}
+
+#seller-types-background {
+    position: absolute;
+    /*Overrides the padding in the parent setting*/
+    left: -5%;
+    right: -5%;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    background: linear-gradient(-8deg, white 25%, rgb(30, 119, 56) 25%, rgb(41, 141, 71) 100%)
+}
+
+.seller-box {
+    width: 80%;
+    height: 80px;
+    padding: 5%;
+}
