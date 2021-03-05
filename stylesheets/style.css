@@ -1,9 +1,9 @@
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lato', Arial, sans-serif;
 }
 
-header, main {
+header, main, footer {
     padding: 4%;
 }
 
@@ -41,7 +41,7 @@ header, main {
 
 .navbar-icon {
     height: 30px;
-    margin: 0px 15px 0px 15px;
+    margin: 5px;
 }
 
 .navbar-button {
@@ -91,6 +91,7 @@ header, main {
     border-radius: 10px;
     padding: 30px;
     width: 18%;
+    min-height: 360px;
 }
 
 body {
@@ -121,4 +122,27 @@ body {
     width: 80%;
     height: 80px;
     padding: 5%;
+}
+
+#signup-card {
+    background: linear-gradient(-20deg, rgb(92, 206, 187) 0%, rgb(62, 201, 104) 40%, rgb(71, 199, 199) 100%)
+}
+
+footer {
+    position: relative;
+}
+
+#footer-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(-8deg, rgba(0, 0, 0, 0.1) 35%, white 35%);
+    z-index: -1;
+}
+
+#foot {
+    border-top: 2px gainsboro solid;
+    padding-top: 5%;
 }

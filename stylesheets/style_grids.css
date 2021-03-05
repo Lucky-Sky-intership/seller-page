@@ -1,0 +1,15 @@
+.auto-row {
+    grid-template-rows: auto;
+}
+
+.auto-col {
+    grid-template-columns: auto;
+}
+
+.justify-center {
+    justify-items: center;
+}
+
+.justify-spacebetween {
+    justify-content: space-between;
+}
