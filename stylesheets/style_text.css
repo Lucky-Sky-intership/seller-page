@@ -1,35 +1,76 @@
-.txt-14 {
-    font-size: 14pt;
+.txt-20 {
+    font-size: 2vmin;
 }
 
-.txt-16 {
-    font-size: 16pt;
-}
-
-.txt-18 {
-    font-size: 18pt;
+.txt-22 {
+    font-size: 2.2vmin;
 }
 
 .txt-24 {
-    font-size: 24pt;
+    font-size: 2.4vmin;
 }
 
 .txt-26 {
-    font-size: 26pt;
+    font-size: 2.6vmin;
+}
+
+.txt-28 {
+    font-size: 2.8vmin;
 }
 
 .txt-30 {
-    font-size: 30pt;
+    font-size: 3vmin;
+}
+
+.txt-32 {
+    font-size: 3.2vmin;
 }
 
 .txt-36 {
-    font-size: 36pt;
+    font-size: 3.6vmin;
 }
 
 .txt-42 {
-    font-size: 42pt;
+    font-size: 4.2vmin;
 }
 
 .txt-48 {
-    font-size: 48pt;
+    font-size: 4.8vmin;
+}
+
+.txt-54 {
+    font-size: 5.4vmin;
+}
+
+@media only screen and (min-width: 1000px) {
+    .txt-20 {
+        font-size: 20px;
+    }
+    .txt-22 {
+        font-size: 22px;
+    }
+    .txt-24 {
+        font-size: 24px;
+    }
+    .txt-28 {
+        font-size: 28px;
+    }
+    .txt-30 {
+        font-size: 30px;
+    }
+    .txt-32 {
+        font-size: 32px;
+    }
+    .txt-36 {
+        font-size: 36px;
+    }
+    .txt-42 {
+        font-size: 42px;
+    }
+    .txt-48 {
+        font-size: 48px;
+    }
+    .txt-54 {
+        font-size: 54px;
+    }
 }

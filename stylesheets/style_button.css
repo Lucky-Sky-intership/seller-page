@@ -1,0 +1,25 @@
+/*White and Blue Button*/
+
+.wb-button {
+    background-color: white;
+    color: cornflowerblue;
+    border-color: cornflowerblue;
+}
+
+/*White and Black Button*/
+
+.wbk-button {
+    background-color: white;
+    color: black;
+}
+
+.wb-button, .wbk-button {
+    transition: 0.5s;
+    cursor: pointer;
+    user-select: none;
+}
+
+.wb-button:hover, .wbk-button:hover {
+    color: coral;
+    border-color: coral;
+}
