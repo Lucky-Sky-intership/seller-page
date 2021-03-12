@@ -17,6 +17,11 @@
     max-width: 120px;
 }
 
+.w140 {
+    width: 14vmin;
+    max-width: 140px;
+}
+
 .w150 {
     width: 15vmin;
     max-width: 150px;
@@ -62,21 +67,27 @@
     max-height: 80px;
 }
 
+.h100 {
+    height: 10vmin;
+    max-height: 100px;
+}
+
 .h200 {
     height: 20vmin;
     max-height: 200px;
 }
+
 
 /*  if viewport width < 1000
     then use vw*percentage
 */
 
 .ft40 {
-    font-size: calc(4vw);
+    font-size: 4vw;
 }
 
 .ft30 {
-    font-size: calc(3vw);
+    font-size: 3vw;
 }
 
 @media only screen and (min-width: 1000px) {

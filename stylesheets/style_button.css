@@ -1,4 +1,4 @@
-/*White and Blue Button*/
+/*White background and Blue text Button*/
 
 .wb-button {
     background-color: white;
@@ -6,7 +6,7 @@
     border-color: cornflowerblue;
 }
 
-/*White and Black Button*/
+/*White background and Black text Button*/
 
 .wbk-button {
     background-color: white;
@@ -22,4 +22,49 @@
 .wb-button:hover, .wbk-button:hover {
     color: coral;
     border-color: coral;
+}
+
+/*Orange background and White text Button*/
+
+.ow-button {
+    background-color: lightsalmon;
+    color: white;
+}
+
+.ow-button:hover {
+    color: lightsalmon;
+}
+
+/*Blue background and White text Button*/
+
+.bw-button {
+    background-color: cornflowerblue;
+    color: white;
+}
+
+.bw-button:hover {
+    color: cornflowerblue;
+}
+
+/*Green background and White text Button*/
+
+.gw-button {
+    background-color: lightseagreen;
+    color: white;
+}
+
+.gw-button:hover {
+    color: lightseagreen;
+}
+
+.ow-button, .bw-button, .gw-button {
+    transition: 0.5s;
+}
+
+.ow-button:hover, .bw-button:hover, .gw-button:hover {
+    background-color: white;
+}
+
+.wb-button, .wbk-button, .ow-button, .bw-button, .gw-button {
+    border: none;
 }

@@ -6,10 +6,35 @@
     grid-template-columns: auto;
 }
 
+.cgap-10 {
+    column-gap: 1vmin;
+}
+
+.cgap-50 {
+    column-gap: 5vmin;
+}
+
+@media only screen and (min-width:1000) {
+    .colg-10 {
+        column-gap: 10px;
+    }
+    .colg-50 {
+        column-gap: 50px;
+    }
+}
+
 .justify-center {
     justify-items: center;
 }
 
 .justify-spacebetween {
     justify-content: space-between;
+}
+
+.justify-end {
+    justify-content: end;
+}
+
+.justify-self-end {
+    justify-self: end;
 }

@@ -12,27 +12,29 @@
         <link rel="stylesheet" href="stylesheets/style_general.css">
         <link rel="stylesheet" href="stylesheets/style_size.css">
         <link rel="stylesheet" href="stylesheets/style_color.css">
+        <link rel="stylesheet" href="stylesheets/style_animation.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Font -->
         <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
         <title>Seller</title>
     </head>
     <body>
-        <script src="scripts/collapse.js"></script>
+        <script src="scripts/functions.js"></script>
+        <script src="scripts/data.js"></script>
         <!-- a 4% padding all around-->
         <header style="position: relative;">
             <div id="background-1"></div>
             <!--navbar: logos and links-->
-            <nav id="top-navbar" class="container align-center">
+            <nav class="container align-center" style="grid-template-columns: 20% auto 30%;">
                 <div class="inline">
                     <img src="icons/ijb-logo-white.png" class="h40">
                 </div>
                 <div class="txt-24 white row-flex align-center">
-                    <div class="p10 pointer">Home</div>
-                    <div class="p10 pointer">Seller</div>
+                    <div class="p10 ptr lnk" onclick="directTo('https://google.com')">Home</div>
+                    <div class="p10 ptr lnk" onclick="directTo('https://google.com')">Seller</div>
                 </div>
-                <div id="navbar-icon-block">
-                    <div class="row-flex align-center ft40">
+                <div class="justify-self-end">
+                    <div class="row-flex justify-spacebetween align-center ft40">
                         <i class="fa fa-facebook-square m5 white"></i>
                         <i class="fa fa-instagram m5 white"></i>
                         <i class="fa fa-weixin m5 white"></i>
@@ -40,6 +42,7 @@
                     </div>
                 </div>
             </nav>
+            <div style="height: 10vmax;"></div>
             <!-- The first description block-->
             <div id="top-description" class="container align-center">
                 <div id="top-description-left-half">
@@ -54,7 +57,7 @@
                         auctor. Quam nulla porttitor massa id neque aliquam vestibulum
                         morbi.]]
                     </p>
-                    <button id="signup-button" class="wb-button h50 w120 txt-20">
+                    <button id="signup-button" class="wb-button h60 w140 txt-20" onclick="directTo('https://google.com')">
                         <b>SIGN UP</b>
                     </button>
                 </div>
@@ -63,15 +66,15 @@
         <!-- a 4% padding all around-->
         <main>
             <!-- Four vertical blocks-->
-            <section id="four-blocks" class="row-flex align-center" style="justify-content: space-between;">
+            <section id="four-blocks" class="row-flex align-center justify-spacebetween">
                 <!-- First block -->
-                <div class="vertical-block txt-22 block-shadow container align-center">
+                <div class="vertical-block txt-22 block-shadow container align-center" style="overflow: hidden;">
                     <h4 class="deepblue">{{ $t("m.GetStarted") }}</h4>
                     <p class="txt-22 lh2 gray">
                         Get to know the procedure for how to become a Seller at
                         iJiaBuy.
                     </p>
-                    <button class="round button-shadow w180 h60 txt-22 white h-center" style="background-color: cornflowerblue;">Learn More</button>
+                    <button class="rnd4 button-shadow w180 h60 txt-22 bw-button h-center" onclick="gotoBlock('seller-types')">Learn More</button>
                 </div>
                 <!-- Second block -->
                 <div class="vertical-block txt-22 block-shadow container align-center" style="transform: translateY(-30px);">
@@ -79,7 +82,7 @@
                     <p class="txt-22 lh2 gray">
                         iJiaBuy provides multiple seller types to suit your needs.
                     </p>
-                    <button class="round button-shadow w180 h60 txt-22 white h-center" style="background-color: lightsalmon;">Learn More</button>
+                    <button class="rnd4 button-shadow w180 h60 txt-22 ow-button h-center">Learn More</button>
                 </div>
                 <!-- Third block -->
                 <div class="vertical-block txt-22 block-shadow container align-center" style="transform: translateY(30px);">
@@ -87,7 +90,7 @@
                     <p class="txt-22 lh2 gray">
                         iJiaBuy has categories from food to personal care.
                     </p>
-                    <button class="round button-shadow w180 h60 txt-22 white h-center" style="background-color: lightseagreen;">Learn More</button>
+                    <button class="rnd4 button-shadow w180 h60 txt-22 gw-button h-center">Learn More</button>
                 </div>
                 <!-- Fourth block -->
                 <div class="vertical-block txt-22 block-shadow container align-center">
@@ -95,14 +98,14 @@
                     <p class="txt-22 lh2 gray">
                         Selling products at iJiaBuy can give you benefits.
                     </p>
-                    <button class="round button-shadow w180 h60 txt-22 white h-center" style="background-color: lightseagreen;">Learn More</button>
+                    <button class="rnd4 button-shadow w180 h60 txt-22 gw-button h-center">Learn More</button>
                 </div>
             </section>
             <!-- Get Started Page -->
-            <section id="get-started" class="whole-page row-flex align-center">
-                <div id="get-started-content" class="half-width">
+            <section id="get-started" class="whole-page container align-center" style="grid-template-columns: repeat(2, 1fr);">
+                <div id="get-started-content">
                     <div id="get-started-title" class="row-flex align-center">
-                        <div class="ft40">
+                        <div class="txt-42">
                             <span class="fa-stack m20">
                                 <i class="fa fa-circle fa-stack-2x" style="color:lightseagreen;"></i>
                                 <i class="fa fa-hand-o-right fa-stack-1x" style="color:white;"></i>
@@ -133,7 +136,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="half-width full-height container align-center">
+                <div class="full-height container align-center">
                     <img src="images/image-placeholder.jpg" class="h-center" style="
                         max-height: 90%;
                         max-width: 80%;">
@@ -141,21 +144,23 @@
             </section>
             <!-- Seller Types Page -->
             <!-- Green background -->
-            <section id="seller-types" class="whole-page row-flex align-center relative">
+            <section id="seller-types" class="whole-page align-center relative container" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
                 <div id="seller-types-background"></div>
-                <div id="seller-types-content" class="half-width">
+                <div id="seller-types-content" class="full-width">
                     <div id="seller-types-title" class="row-flex align-center" style="margin-bottom: 2%;">
-                        <span class="fa-stack m20" style="font-size: 40px;">
+                        <span class="fa-stack m20 txt-42">
                             <i class="fa fa-circle fa-stack-2x" style="color:lightseagreen;"></i>
                             <i class="fa fa-hand-o-right fa-stack-1x" style="color:white;"></i>
                         </span>
                         <p class="white txt-48">Seller Types</p>
                     </div>
                     <!--Three horizontal blocks-->
-                    <div class="round bg-white seller-box block-shadow" style="margin-bottom: 5%;">
+                    <div class="rnd4 bg-white seller-box h100 block-shadow" style="margin-bottom: 5%;">
                         <div class="h-center" style="height: 100%;">
                             <div class="row-flex" style="height: 100%;">
-                                <i class="fa fa-chevron-right m20 drop-shadow-light" style="color:lightseagreen; font-size: 48px;"></i>
+                                <div class="txt-42">
+                                    <i class="fa fa-chevron-right m20 drop-shadow-light" style="color:lightseagreen"></i>
+                                </div>
                                 <div class="txt-30 medium-green container align-center">
                                     <div>Vendor</div>
                                     <div>Learn More</div>
@@ -163,23 +168,12 @@
                             </div>
                         </div>
                     </div>
-                    <!--
-                    <div class="round bg-white seller-box block-shadow" style="margin-bottom: 5%;">
+                    <div class="rnd4 bg-white seller-box h100 block-shadow" style="margin-bottom: 5%;">
                         <div class="h-center" style="height: 100%;">
                             <div class="row-flex" style="height: 100%;">
-                                <img src="icons/placeholder.svg" style="height: 100%; width: 25%;">
-                                <div class="txt-30 medium-green container align-center">
-                                    <div>VIP Vendor</div>
-                                    <div>Learn More</div>
+                                <div class="txt-42">
+                                    <i class="fa fa-chevron-right m20 drop-shadow-light" style="color:lightseagreen"></i>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                    -->
-                    <div class="round bg-white seller-box block-shadow" style="margin-bottom: 5%;">
-                        <div class="h-center" style="height: 100%;">
-                            <div class="row-flex" style="height: 100%;">
-                                <i class="fa fa-chevron-right m20 drop-shadow-light" style="color:lightseagreen; font-size: 48px;"></i>
                                 <div class="txt-30 medium-green container align-center">
                                     <div>Supplier</div>
                                     <div>Learn More</div>
@@ -188,7 +182,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="half-width full-height container align-center">
+                <div class="full-height container align-center">
                     <img src="images/image-placeholder.jpg" class="h-center" style="
                         max-height: 90%;
                         max-width: 80%;">
@@ -199,33 +193,34 @@
                 <div class="h-center txt-48" style="align-self: center;">
                     <b>Categories</b>
                 </div>
-                <div class="container full-width justify-center" style="grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));">
+                <!-- Always divide the whole space into 4 columns -->
+                <div class="container full-width justify-center cgap-10" style="grid-template-columns: repeat(4, minmax(0, 1fr));">
                     <div class="full-width" style="text-align: center;">
-                        <img class="drop-shadow w200" style="margin-bottom: 20px;" src="images/round-img-1.png">
+                        <img class="drop-shadow w200 m20 circle" src="images/img-1.jpg">
                         <div class="txt-22">
                             <b>Personal</b>
                         </div>
                     </div>
                     <div class="full-width" style="text-align: center;">
-                        <img class="drop-shadow w200" style="margin-bottom: 20px;" src="images/round-img-2.png">
+                        <img class="drop-shadow w200 m20 circle" src="images/img-2.jpg">
                         <div class="txt-22">
                             <b>Household</b>
                         </div>
                     </div>
                     <div class="full-width" style="text-align: center;">
-                        <img class="drop-shadow w200" style="margin-bottom: 20px;" src="images/round-img-3.png">
+                        <img class="drop-shadow w200 m20 circle" src="images/img-3.jpg">
                         <div class="txt-22">
                             <b>Electronic</b>
                         </div>
                     </div>
                     <div class="full-width" style="text-align: center;">
-                        <img class="drop-shadow w200" style="margin-bottom: 20px;" src="images/round-img-4.png">
+                        <img class="drop-shadow w200 m20 circle" src="images/img-4.jpg">
                         <div class="txt-22">
                             <b>Children</b>
                         </div>
                     </div>
                     <div class="full-width" style="text-align: center;">
-                        <img class="drop-shadow w200" style="margin-bottom: 20px;" src="images/round-img-5.png">
+                        <img class="drop-shadow w200 m20 circle" src="images/img-5.jpg">
                         <div class="txt-22">
                             <b>Yumms</b>
                         </div>
@@ -235,7 +230,7 @@
             <!-- Benefits Page -->
             <section id="benefits" class="whole-page">
                 <div id="benefits-title" class="row-flex align-center">
-                    <span class="fa-stack m20" style="font-size: 40px;">
+                    <span class="fa-stack m20 txt-42">
                         <i class="fa fa-circle fa-stack-2x" style="color:lightseagreen;"></i>
                         <i class="fa fa-hand-o-right fa-stack-1x" style="color:white;"></i>
                     </span>
@@ -243,38 +238,33 @@
                         <b>Benefits</b>
                     </p>
                 </div>
-                <div class="row-flex gray txt-24 align-center justify-spacebetween" style="border-bottom: 2px rgb(190, 190, 190) solid;">
-                    <div class="mw20p" style="cursor: pointer;" onclick="
-                        switchContent(
-                            'Raw denim you probably haven\'t heard of them jean shorts\
-                            Austin. Nesciunt tofu stumptown aliqua, retro synth master\
-                            cleanse. Mustache cliche tempor, williamsburg carles vegan\
-                            helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher\
-                            synth.',
-                          'benefits-content')">Seller Portal</div>
-                    <div class="mw20p" style="cursor: pointer;" onclick="
-                        switchContent(
-                        'Cause if you do, it can be yours for FREE. Hit the button below to navigate to\
-                         Creative Tim where you can find the Design System in HTML. Start a new project or give an\
-                         old Bootstrap project a new look!',
-                      'benefits-content')">Expand Your Market</div>
-                    <div class="mw20p" style="cursor: pointer;" onclick="
-                    switchContent(
-                        'According to the National Oceanic and Atmospheric Administration,\
-                         Ted, Scambos, NSIDClead scentist, puts the potentially record low maximum sea ice extent\
-                         tihs year down to low ice.',
-                      'benefits-content')">Reliable Distribution</div>
-                    <div class="mw20p" style="cursor: pointer;">Multiple Seller Types</div>
+                <div class="container txt-24 align-center" style="border-bottom: 2px rgb(190, 190, 190) solid; grid-template-columns: repeat(4, 1fr);">
+                    <div id="first-button" class="full-width wbk-button rnd6" onclick="
+                        switchContent(SellerPortalText, 'benefits-content'); addClasses(['lightgreen-back', 'white'],'first-button');">
+                        <div class="p10">Seller Portal</div>
+                    </div>
+                    <div id="second-button" class="full-width wbk-button rnd6" onclick="
+                        switchContent(ExpandYourMarketText, 'benefits-content'); addClasses(['lightgreen-back', 'white'],'second-button');">
+                        <div class="p10">Expand Your Market</div>
+                    </div>
+                    <div id="third-button" class="full-width wbk-button rnd6" onclick="
+                    switchContent(ReliableDistributionText, 'benefits-content'); addClasses(['lightgreen-back', 'white'],'third-button');">
+                        <div class="p10">Reliable Distribution</div>
+                    </div>
+                    <div id="fourth-button" class="full-width wbk-button rnd6" onclick="
+                    switchContent(MultipleSellerTypesText, 'benefits-content'); addClasses(['lightgreen-back', 'white'],'fourth-button');">
+                        <div class="p10">Multiple Seller Types</div>
+                    </div>
                 </div>
                 <div id="benefits-content" class="txt-22 gray mtb10">
-                    Raw denim you probably haven\'t heard of them jean shorts
+                    Raw denim you probably haven't heard of them jean shorts
                     Austin. Nesciunt tofu stumptown aliqua, retro synth master
                     cleanse. Mustache cliche tempor, williamsburg carles vegan
                     helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
                     synth.
                 </div>
                 <br>
-                <div id="signup-card" class="full-width round block-shadow white">
+                <div id="signup-card" class="full-width rnd4 block-shadow white">
                     <div class="row-flex align-center p5p">
                         <div class="half-width">
                             <div class="txt-32">[[Lorem ipsum dolor sit amet, consectetur adipiscing elit]]</div>
@@ -287,7 +277,7 @@
                             </p>
                         </div>
                         <div class="half-width">
-                            <button class="wbk-button round h-center txt-20 button-shadow plr15p ptb5p">
+                            <button class="wbk-button rnd4 h-center txt-20 button-shadow plr15p ptb5p"  onclick="directTo('https://google.com')">
                                 <b>SIGN UP</b>
                             </button>
                         </div>
@@ -303,15 +293,15 @@
                 <div>Let's Stay Connected</div>
                 <!-- Three icons -->
                 <div>
-                    <span class="fa-stack m10" style="font-size: 40px;">
+                    <span class="fa-stack m10 txt-42">
                         <i class="fa fa-square fa-stack-2x skyblue"></i>
                         <i class="fa fa-twitter fa-stack-1x" style="color:white;"></i>
                     </span>
-                    <span class="fa-stack m10" style="font-size: 40px;">
+                    <span class="fa-stack m10 txt-42">
                         <i class="fa fa-square fa-stack-2x deepblue"></i>
                         <i class="fa fa-facebook-square fa-stack-1x" style="color:white;"></i>
                     </span>
-                    <span class="fa-stack m10" style="font-size: 40px;">
+                    <span class="fa-stack m10 txt-42">
                         <i class="fa fa-square fa-stack-2x dark"></i>
                         <i class="fa fa-weixin fa-stack-1x" style="color:white;"></i>
                     </span>
@@ -321,9 +311,9 @@
             <div id="foot" class="row-flex gray justify-spacebetween txt-28">
                 <div>@2021 iJiaBuy</div>
                 <div class="row-flex justify-spacebetween" style="min-width: 40%;">
-                    <span>About us</span>
-                    <span>Blog</span>
-                    <span>MIT License</span>
+                    <span class="ptr">About us</span>
+                    <span class="ptr">Blog</span>
+                    <span class="ptr">MIT License</span>
                 </div>
             </div>
         </footer>

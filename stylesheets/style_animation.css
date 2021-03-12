@@ -1,0 +1,33 @@
+.gray-blink {
+    animation-name: gray-blink-animation;
+    animation-duration: 1s;
+}
+
+@keyframes gray-blink-animation {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: gray;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.blue-blink {
+    animation-name: blue-blink-animation;
+    animation-duration: 1s;
+}
+
+@keyframes blue-blink-animation {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: lightcyan;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
