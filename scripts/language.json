@@ -1,0 +1,19 @@
+{
+    "local": [
+        {
+            "id": "id",
+            "en": "en",
+            "ch": "ch"
+        },
+        {
+            "id": "top-description-TTL",
+            "en": "Lorem ipsum dolor sit amet",
+            "ch": "美国的疫情大幅好转"
+        },
+        {
+            "id": "top-description-SBTTL",
+            "en": "These crises take systemic proportions",
+            "ch": "美国的疫情大幅好转"
+        }
+    ]
+}

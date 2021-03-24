@@ -9,32 +9,59 @@
 
 .w100 {
     width: 10vmin;
-    max-width: 100px;
+    max-width: 100%;
 }
 
 .w120 {
     width: 12vmin;
-    max-width: 120px;
+    max-width: 100%;
 }
 
 .w140 {
     width: 14vmin;
-    max-width: 140px;
+    max-width: 100%;
 }
 
 .w150 {
     width: 15vmin;
-    max-width: 150px;
+    max-width: 100%;
 }
 
 .w180 {
     width: 18vmin;
-    max-width: 180px;
+    max-width: 100%;
 }
 
 .w200 {
     width: 20vmin;
-    max-width: 200px;
+    max-width: 100%;
+}
+
+@media only screen and (min-width:1000px) {
+    .w100 {
+        width: 100px;
+        max-width: 100%;
+    }
+    .w120 {
+        width: 120px;
+        max-width: 100%;
+    }
+    .w140 {
+        width: 140px;
+        max-width: 100%;
+    }
+    .w150 {
+        width: 150px;
+        max-width: 100%;
+    }
+    .w180 {
+        width: 180px;
+        max-width: 100%;
+    }
+    .w200 {
+        width: 200px;
+        max-width: 100%;
+    }
 }
 
 .mw20p {
@@ -76,7 +103,6 @@
     height: 20vmin;
     max-height: 200px;
 }
-
 
 /*  if viewport width < 1000
     then use vw*percentage

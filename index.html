@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <link rel="icon" href="favicon.ico">
+        <link rel="icon" href="">
         <link rel="stylesheet" href="stylesheets/style.css">
         <link rel="stylesheet" href="stylesheets/style_text.css">
         <link rel="stylesheet" href="stylesheets/style_grids.css">
@@ -15,12 +15,13 @@
         <link rel="stylesheet" href="stylesheets/style_animation.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Font -->
-        <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap">
         <title>Seller</title>
     </head>
     <body>
         <script src="scripts/functions.js"></script>
         <script src="scripts/data.js"></script>
+        <script src="scripts/localization.js"></script>
         <!-- a 4% padding all around-->
         <header style="position: relative;">
             <div id="background-1"></div>
@@ -30,15 +31,15 @@
                     <img src="icons/ijb-logo-white.png" class="h40">
                 </div>
                 <div class="txt-24 white row-flex align-center">
-                    <div class="p10 ptr lnk" onclick="directTo('https://google.com')">Home</div>
-                    <div class="p10 ptr lnk" onclick="directTo('https://google.com')">Seller</div>
+                    <div id="navbar-item1" class="p10 ptr lnk" onclick="directTo('https://google.com')">Home</div>
+                    <div id="navbar-item2" class="p10 ptr lnk" onclick="directTo('https://google.com')">Seller</div>
                 </div>
                 <div class="justify-self-end">
                     <div class="row-flex justify-spacebetween align-center ft40">
                         <i class="fa fa-facebook-square m5 white"></i>
                         <i class="fa fa-instagram m5 white"></i>
                         <i class="fa fa-weixin m5 white"></i>
-                        <button class="navbar-button h60 w150 button-shadow h-center txt-20">EN/CH</button>
+                        <button class="navbar-button h60 w150 button-shadow h-center txt-20" onclick="switchLanguage()">EN/CH</button>
                     </div>
                 </div>
             </nav>
@@ -46,18 +47,18 @@
             <!-- The first description block-->
             <div id="top-description" class="container align-center">
                 <div id="top-description-left-half">
-                    <h1 class="txt-36 white">
+                    <h1 id="top-description-TTL" class="txt-36 white">
                         [[Lorem ipsum dolor sit amet]]
                     </h1>
-                    <h2 class="txt-30 white">[[Lorem ipsum dolor sit amet]]</h2>
-                    <p class="txt-20 white">
-                        [[Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    <h2 id="top-description-SBTTL" class="txt-30 white">[[Lorem ipsum dolor sit amet]]</h2>
+                    <p id="top-description-CTT" class="txt-20 white">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                         do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                         Nisl suscipit adipiscing bibendum est ultricies integer quis
                         auctor. Quam nulla porttitor massa id neque aliquam vestibulum
-                        morbi.]]
+                        morbi.
                     </p>
-                    <button id="signup-button" class="wb-button h60 w140 txt-20" onclick="directTo('https://google.com')">
+                    <button id="signup-button" class="wb-button h60 w140 txt-22 rnd6" onclick="directTo('https://google.com')">
                         <b>SIGN UP</b>
                     </button>
                 </div>
@@ -69,33 +70,33 @@
             <section id="four-blocks" class="row-flex align-center justify-spacebetween">
                 <!-- First block -->
                 <div class="vertical-block txt-22 block-shadow container align-center" style="overflow: hidden;">
-                    <h4 class="deepblue">{{ $t("m.GetStarted") }}</h4>
-                    <p class="txt-22 lh2 gray">
+                    <h4 id="block-1-title" class="deepblue">Get Started</h4>
+                    <p id="block-1-content" class="lh2 gray">
                         Get to know the procedure for how to become a Seller at
                         iJiaBuy.
                     </p>
-                    <button class="rnd4 button-shadow w180 h60 txt-22 bw-button h-center" onclick="gotoBlock('seller-types')">Learn More</button>
+                    <button class="rnd4 button-shadow w180 h60 txt-22 bw-button h-center" onclick="gotoBlock('get-started')">Learn More</button>
                 </div>
                 <!-- Second block -->
-                <div class="vertical-block txt-22 block-shadow container align-center" style="transform: translateY(-30px);">
-                    <h4 class="lightorange">{{ $t("m.SellerTypes") }}</h4>
-                    <p class="txt-22 lh2 gray">
+                <div class="vertical-block txt-22 block-shadow container align-center" style="transform: translateY(-35px);">
+                    <h4 id="block-2-title" class="lightorange">Seller Types</h4>
+                    <p id="block-2-content" class="lh2 gray">
                         iJiaBuy provides multiple seller types to suit your needs.
                     </p>
-                    <button class="rnd4 button-shadow w180 h60 txt-22 ow-button h-center">Learn More</button>
+                    <button class="rnd4 button-shadow w180 h60 txt-22 ow-button h-center" onclick="gotoBlock('seller-types')">Learn More</button>
                 </div>
                 <!-- Third block -->
-                <div class="vertical-block txt-22 block-shadow container align-center" style="transform: translateY(30px);">
-                    <h4 class="lightgreen">{{ $t("m.Categories") }}</h4>
-                    <p class="txt-22 lh2 gray">
+                <div class="vertical-block txt-22 block-shadow container align-center" style="transform: translateY(35px);">
+                    <h4 id="block-3-title" class="lightgreen">Categories</h4>
+                    <p id="block-3-content" class="lh2 gray">
                         iJiaBuy has categories from food to personal care.
                     </p>
                     <button class="rnd4 button-shadow w180 h60 txt-22 gw-button h-center">Learn More</button>
                 </div>
                 <!-- Fourth block -->
                 <div class="vertical-block txt-22 block-shadow container align-center">
-                    <h4 class="lightgreen">{{ $t("m.Benefits") }}</h4>
-                    <p class="txt-22 lh2 gray">
+                    <h4 id="block-4-title" class="lightgreen">Benefits</h4>
+                    <p id="block-4-content" class="txt-22 lh2 gray">
                         Selling products at iJiaBuy can give you benefits.
                     </p>
                     <button class="rnd4 button-shadow w180 h60 txt-22 gw-button h-center">Learn More</button>
@@ -111,28 +112,28 @@
                                 <i class="fa fa-hand-o-right fa-stack-1x" style="color:white;"></i>
                             </span>
                         </div>
-                        <p class="txt-48">Get Started</p>
+                        <p id="get-started-TTL" class="txt-48">Get Started</p>
                     </div>
                     <ul>
                         <li class="row-flex align-center">
                             <i class="fa fa-chevron-right m10 drop-shadow-light" style="color:lightseagreen; font-size: 40px;"></i>
-                            <p class="gray txt-22">Sign Up</p>
+                            <p id="get-started-L1" class="gray txt-22">Sign Up</p>
                         </li>
                         <li class="row-flex align-center">
                             <i class="fa fa-chevron-right m10 drop-shadow-light" style="color:lightseagreen; font-size: 40px;"></i>
-                            <p class="gray txt-22">Provide information and review terms of business</p>
+                            <p id="get-started-L2" class="gray txt-22">Provide information and review terms of business</p>
                         </li>
                         <li class="row-flex align-center">
                             <i class="fa fa-chevron-right m10 drop-shadow-light" style="color:lightseagreen; font-size: 40px;"></i>
-                            <p class="gray txt-22">Add Products to Seller Portal and Add Payment method</p>
+                            <p id="get-started-L3" class="gray txt-22">Add Products to Seller Portal and Add Payment method</p>
                         </li>
                         <li class="row-flex align-center">
                             <i class="fa fa-chevron-right m10 drop-shadow-light" style="color:lightseagreen; font-size: 40px;"></i>
-                            <p class="gray txt-22">Go Live once approved</p>
+                            <p id="get-started-L4" class="gray txt-22">Go Live once approved</p>
                         </li>
                         <li class="row-flex align-center">
                             <i class="fa fa-chevron-right m10 drop-shadow-light" style="color:lightseagreen; font-size: 40px;"></i>
-                            <p class="gray txt-22">Manage your business and get paid</p>
+                            <p id="get-started-L5" class="gray txt-22">Manage your business and get paid</p>
                         </li>
                     </ul>
                 </div>
@@ -146,13 +147,13 @@
             <!-- Green background -->
             <section id="seller-types" class="whole-page align-center relative container" style="grid-template-columns: repeat(2, minmax(0, 1fr));">
                 <div id="seller-types-background"></div>
-                <div id="seller-types-content" class="full-width">
+                <div id="seller-types-content" class="w100p">
                     <div id="seller-types-title" class="row-flex align-center" style="margin-bottom: 2%;">
                         <span class="fa-stack m20 txt-42">
                             <i class="fa fa-circle fa-stack-2x" style="color:lightseagreen;"></i>
                             <i class="fa fa-hand-o-right fa-stack-1x" style="color:white;"></i>
                         </span>
-                        <p class="white txt-48">Seller Types</p>
+                        <p id="seller-types-TTL" class="white txt-48">Seller Types</p>
                     </div>
                     <!--Three horizontal blocks-->
                     <div class="rnd4 bg-white seller-box h100 block-shadow" style="margin-bottom: 5%;">
@@ -162,7 +163,7 @@
                                     <i class="fa fa-chevron-right m20 drop-shadow-light" style="color:lightseagreen"></i>
                                 </div>
                                 <div class="txt-30 medium-green container align-center">
-                                    <div>Vendor</div>
+                                    <div id="seller-types-I1">Vendor</div>
                                     <div>Learn More</div>
                                 </div>
                             </div>
@@ -175,7 +176,7 @@
                                     <i class="fa fa-chevron-right m20 drop-shadow-light" style="color:lightseagreen"></i>
                                 </div>
                                 <div class="txt-30 medium-green container align-center">
-                                    <div>Supplier</div>
+                                    <div id="seller-types-I2">Supplier</div>
                                     <div>Learn More</div>
                                 </div>
                             </div>
@@ -189,133 +190,132 @@
                 </div>
             </section>
             <!-- Categories Page -->
-            <section id="categories" class="whole-page container auto-row">
-                <div class="h-center txt-48" style="align-self: center;">
+            <section id="categories" class="whole-page container justify-center cgap-10" style="grid-template-columns: repeat(4, 1fr);">
+                <div id="catagories-TTL" class="h-center txt-48" style="align-self: center; grid-column: 1/5;">
                     <b>Categories</b>
                 </div>
                 <!-- Always divide the whole space into 4 columns -->
-                <div class="container full-width justify-center cgap-10" style="grid-template-columns: repeat(4, minmax(0, 1fr));">
-                    <div class="full-width" style="text-align: center;">
-                        <img class="drop-shadow w200 m20 circle" src="images/img-1.jpg">
-                        <div class="txt-22">
-                            <b>Personal</b>
-                        </div>
-                    </div>
-                    <div class="full-width" style="text-align: center;">
-                        <img class="drop-shadow w200 m20 circle" src="images/img-2.jpg">
-                        <div class="txt-22">
-                            <b>Household</b>
-                        </div>
-                    </div>
-                    <div class="full-width" style="text-align: center;">
-                        <img class="drop-shadow w200 m20 circle" src="images/img-3.jpg">
-                        <div class="txt-22">
-                            <b>Electronic</b>
-                        </div>
-                    </div>
-                    <div class="full-width" style="text-align: center;">
-                        <img class="drop-shadow w200 m20 circle" src="images/img-4.jpg">
-                        <div class="txt-22">
-                            <b>Children</b>
-                        </div>
-                    </div>
-                    <div class="full-width" style="text-align: center;">
-                        <img class="drop-shadow w200 m20 circle" src="images/img-5.jpg">
-                        <div class="txt-22">
-                            <b>Yumms</b>
-                        </div>
+                <div class="w100p" style="text-align: center;">
+                    <img class="drop-shadow w200 m20 circle enlarge" src="images/img-1.jpg">
+                    <div id="catagories-I1" class="txt-22">
+                        <b>Personal</b>
                     </div>
                 </div>
-            </section>
-            <!-- Benefits Page -->
-            <section id="benefits" class="whole-page">
-                <div id="benefits-title" class="row-flex align-center">
-                    <span class="fa-stack m20 txt-42">
-                        <i class="fa fa-circle fa-stack-2x" style="color:lightseagreen;"></i>
-                        <i class="fa fa-hand-o-right fa-stack-1x" style="color:white;"></i>
-                    </span>
-                    <p class="txt-48">
-                        <b>Benefits</b>
-                    </p>
+                <div class="w100p" style="text-align: center;">
+                    <img class="drop-shadow w200 m20 circle enlarge" src="images/img-2.jpg">
+                    <div id="catagories-I2" class="txt-22">
+                        <b>Household</b>
+                    </div>
                 </div>
-                <div class="container txt-24 align-center" style="border-bottom: 2px rgb(190, 190, 190) solid; grid-template-columns: repeat(4, 1fr);">
-                    <div id="first-button" class="full-width wbk-button rnd6" onclick="
+                <div class="w100p" style="text-align: center;">
+                    <img class="drop-shadow w200 m20 circle enlarge" src="images/img-3.jpg">
+                    <div id="catagories-I3" class="txt-22">
+                        <b>Electronic</b>
+                    </div>
+                </div>
+                <div class="w100p" style="text-align: center;">
+                    <img class="drop-shadow w200 m20 circle enlarge" src="images/img-4.jpg">
+                    <div id="catagories-I4" class="txt-22">
+                        <b>Children</b>
+                    </div>
+                </div>
+                <div class="w100p" style="text-align: center;">
+                    <img class="drop-shadow w200 m20 circle enlarge" src="images/img-5.jpg">
+                    <div id="catagories-I5" class="txt-22">
+                        <b>Yumms</b>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Benefits Page -->
+        <section id="benefits" class="whole-page">
+            <div id="benefits-title" class="row-flex align-center">
+                <span class="fa-stack m20 txt-42">
+                    <i class="fa fa-circle fa-stack-2x" style="color:lightseagreen;"></i>
+                    <i class="fa fa-hand-o-right fa-stack-1x" style="color:white;"></i>
+                </span>
+                <p class="txt-48">
+                    <b>Benefits</b>
+                </p>
+            </div>
+            <div class="container txt-24 align-center" style="border-bottom: 2px rgb(190, 190, 190) solid; grid-template-columns: repeat(4, 1fr);">
+                <div id="first-button" class="w100p wbk-button rnd6" onclick="
                         switchContent(SellerPortalText, 'benefits-content'); addClasses(['lightgreen-back', 'white'],'first-button');">
-                        <div class="p10">Seller Portal</div>
-                    </div>
-                    <div id="second-button" class="full-width wbk-button rnd6" onclick="
-                        switchContent(ExpandYourMarketText, 'benefits-content'); addClasses(['lightgreen-back', 'white'],'second-button');">
-                        <div class="p10">Expand Your Market</div>
-                    </div>
-                    <div id="third-button" class="full-width wbk-button rnd6" onclick="
-                    switchContent(ReliableDistributionText, 'benefits-content'); addClasses(['lightgreen-back', 'white'],'third-button');">
-                        <div class="p10">Reliable Distribution</div>
-                    </div>
-                    <div id="fourth-button" class="full-width wbk-button rnd6" onclick="
-                    switchContent(MultipleSellerTypesText, 'benefits-content'); addClasses(['lightgreen-back', 'white'],'fourth-button');">
-                        <div class="p10">Multiple Seller Types</div>
-                    </div>
+                    <div class="p10">Seller Portal</div>
                 </div>
-                <div id="benefits-content" class="txt-22 gray mtb10">
-                    Raw denim you probably haven't heard of them jean shorts
+                <div id="second-button" class="w100p wbk-button rnd6" onclick="
+                        switchContent(ExpandYourMarketText, 'benefits-content'); addClasses(['lightgreen-back', 'white'],'second-button');">
+                    <div class="p10">Expand Your Market</div>
+                </div>
+                <div id="third-button" class="w100p wbk-button rnd6" onclick="
+                    switchContent(ReliableDistributionText, 'benefits-content'); addClasses(['lightgreen-back', 'white'],'third-button');">
+                    <div class="p10">Reliable Distribution</div>
+                </div>
+                <div id="fourth-button" class="w100p wbk-button rnd6" onclick="
+                    switchContent(MultipleSellerTypesText, 'benefits-content'); addClasses(['lightgreen-back', 'white'],'fourth-button');">
+                    <div class="p10">Multiple Seller Types</div>
+                </div>
+            </div>
+            <article id="benefits-content" class="txt-22 gray mtb10">
+                Raw denim you probably haven't heard of them jean shorts
                     Austin. Nesciunt tofu stumptown aliqua, retro synth master
                     cleanse. Mustache cliche tempor, williamsburg carles vegan
                     helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher
                     synth.
-                </div>
-                <br>
-                <div id="signup-card" class="full-width rnd4 block-shadow white">
-                    <div class="row-flex align-center p5p">
-                        <div class="half-width">
-                            <div class="txt-32">[[Lorem ipsum dolor sit amet, consectetur adipiscing elit]]</div>
-                            <br>
-                            <p class="txt-24 lh15" style="margin: 0;">
-                                sed do eiusmod tempor incididunt ut labore et dolore magna
+            </article>
+            <div style="height: 5vmax;"></div>
+            <div id="signup-card" class="w100p rnd4 block-shadow white">
+                <div class="row-flex align-center p5p">
+                    <div class="half-width">
+                        <div class="txt-32">[[Lorem ipsum dolor sit amet, consectetur adipiscing elit]]</div>
+                        <br>
+                        <p class="txt-24 lh15" style="margin: 0;">
+                            sed do eiusmod tempor incididunt ut labore et dolore magna
                                 aliqua. Nisl suscipit adipiscing bibendum est ultricies
                                 integer quis auctor. Quam nulla porttitor massa id neque
                                 aliquam vestibulum morbi.
-                            </p>
-                        </div>
-                        <div class="half-width">
-                            <button class="wbk-button rnd4 h-center txt-20 button-shadow plr15p ptb5p"  onclick="directTo('https://google.com')">
-                                <b>SIGN UP</b>
-                            </button>
-                        </div>
+                        </p>
+                    </div>
+                    <div class="half-width">
+                        <button class="wbk-button rnd4 h-center txt-20 button-shadow plr15p ptb5p" onclick="directTo('https://google.com')">
+                            <b>SIGN UP</b>
+                        </button>
                     </div>
                 </div>
-            </section>
-        </main>
-        <!-- a 4% padding all around-->
-        <footer>
-            <div id="footer-background"></div>
-            <!-- Stay Connected -->
-            <div class="txt-30 deepblue row-flex align-center justify-spacebetween">
-                <div>Let's Stay Connected</div>
-                <!-- Three icons -->
-                <div>
-                    <span class="fa-stack m10 txt-42">
-                        <i class="fa fa-square fa-stack-2x skyblue"></i>
-                        <i class="fa fa-twitter fa-stack-1x" style="color:white;"></i>
-                    </span>
-                    <span class="fa-stack m10 txt-42">
-                        <i class="fa fa-square fa-stack-2x deepblue"></i>
-                        <i class="fa fa-facebook-square fa-stack-1x" style="color:white;"></i>
-                    </span>
-                    <span class="fa-stack m10 txt-42">
-                        <i class="fa fa-square fa-stack-2x dark"></i>
-                        <i class="fa fa-weixin fa-stack-1x" style="color:white;"></i>
-                    </span>
-                </div>
             </div>
-            <br>
-            <div id="foot" class="row-flex gray justify-spacebetween txt-28">
-                <div>@2021 iJiaBuy</div>
-                <div class="row-flex justify-spacebetween" style="min-width: 40%;">
-                    <span class="ptr">About us</span>
-                    <span class="ptr">Blog</span>
-                    <span class="ptr">MIT License</span>
-                </div>
+        </section>
+    </main>
+    <!-- a 4% padding all around-->
+    <footer>
+        <div id="footer-background"></div>
+        <!-- Stay Connected -->
+        <div class="txt-30 deepblue row-flex align-center justify-spacebetween">
+            <div>Let's Stay Connected</div>
+            <!-- Three icons -->
+            <div>
+                <span class="fa-stack m10 txt-42">
+                    <i class="fa fa-square fa-stack-2x skyblue"></i>
+                    <i class="fa fa-twitter fa-stack-1x" style="color:white;"></i>
+                </span>
+                <span class="fa-stack m10 txt-42">
+                    <i class="fa fa-square fa-stack-2x deepblue"></i>
+                    <i class="fa fa-facebook-square fa-stack-1x" style="color:white;"></i>
+                </span>
+                <span class="fa-stack m10 txt-42">
+                    <i class="fa fa-square fa-stack-2x dark"></i>
+                    <i class="fa fa-weixin fa-stack-1x" style="color:white;"></i>
+                </span>
             </div>
-        </footer>
-    </body>
+        </div>
+        <br>
+        <div id="foot" class="row-flex gray justify-spacebetween txt-28">
+            <div>@2021 iJiaBuy</div>
+            <div class="row-flex justify-spacebetween" style="min-width: 40%;">
+                <span class="ptr">About us</span>
+                <span class="ptr">Blog</span>
+                <span class="ptr">MIT License</span>
+            </div>
+        </div>
+    </footer>
+</body>
 </html>

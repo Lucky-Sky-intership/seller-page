@@ -107,7 +107,7 @@
     height: 100%;
 }
 
-.full-width {
+.w100p {
     width: 100%;
 }
 
@@ -126,6 +126,11 @@
 
 .rnd6 {
     border-radius: 6px;
+    outline: none;
+}
+
+.rnd8 {
+    border-radius: 8px;
     outline: none;
 }
 

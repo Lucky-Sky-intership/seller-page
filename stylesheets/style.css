@@ -44,14 +44,9 @@ header, main, footer {
     line-height: 2.2;
 }
 
-#signup-button {
-    border: 1px solid;
-    border-radius: 4px;
-}
-
 .vertical-block {
     background-color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 3vmin;
     width: 19%;
     max-width: 400px;

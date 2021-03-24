@@ -31,3 +31,12 @@
         background-color: transparent;
     }
 }
+
+.enlarge {
+    transform: scale(1);
+    transition: 0.5s;
+}
+
+.enlarge:hover {
+    transform: scale(1.05);
+}
